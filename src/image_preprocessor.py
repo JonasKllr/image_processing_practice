@@ -15,6 +15,9 @@ class ImagePreprocessor:
 
     def rotate(self):
         self.image = cv2.rotate(self.image, cv2.ROTATE_180)
+    
+    def get_image(self) -> np.ndarray:
+        return self.image
 
 
 def read_image_from_file(PATH: str) -> np.ndarray:
@@ -32,6 +35,6 @@ if __name__ == "__main__":
     image.rotate()
 
     window_name = "Image 3D-printer"
-    cv2.imshow(window_name, image.image)
+    cv2.imshow(window_name, image.get_image())
     cv2.waitKey(0)
     cv2.destroyAllWindows()
