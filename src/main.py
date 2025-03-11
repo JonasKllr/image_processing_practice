@@ -13,10 +13,9 @@ image.crop_to_roi()
 image.rgb_to_grayscale()
 image.rotate()
 
-window_name = "Image 3D-printer"
-cv2.imshow(window_name, image.get_image())
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+plt.imshow(cv2.cvtColor(image.get_image(), cv2.IMREAD_GRAYSCALE))
+plt.show()
+plt.close()
 
 image_point_operations = PointOperators(image.get_image())
 image_point_operations.plot_histogram()
