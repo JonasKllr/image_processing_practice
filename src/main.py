@@ -20,3 +20,8 @@ cv2.destroyAllWindows()
 
 image_point_operations = PointOperators(image.get_image())
 image_point_operations.plot_histogram()
+image_point_operations.apply_histogram_equalization()
+image_point_operations.plot_histogram()
+plt.imshow(cv2.cvtColor(image_point_operations.get_image(), cv2.IMREAD_GRAYSCALE))
+plt.show()
+plt.close()
