@@ -68,4 +68,18 @@ Vertical kernel
     1 & 2 & 1
 \end{bmatrix}
 ```
-![Sobel vertival](./img/image_derivative_vertical.png)
+![Sobel vertical](./img/image_derivative_vertical.png)
+
+
+### Laplacian Derivative
+
+
+```math
+\begin{bmatrix}
+    0 & 1 & 0\\
+    1 & -4 & 1\\
+    0 & 1 & 0
+\end{bmatrix}
+```
+
+![Laplacian](./img/image_derivative_laplacian.png)
