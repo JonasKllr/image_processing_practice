@@ -53,19 +53,19 @@ LinearOperators.apply_derivative(orientation: str)
 Horizontal kernel 
 ```math
 \begin{bmatrix}
-    -1 & 0 & 1\\\
-    -2 & 0 & 2\\\
+    -1 & 0 & 1\\
+    -2 & 0 & 2\\
     -1 & 0 & 2
 \end{bmatrix}
 ```
 ![Sobel horizontal](./img/image_derivative_horizontal.png)
 
 Vertical kernel 
-```math
+$$
 \begin{bmatrix}
-    -1 & -2 & 1\\\
-    0 & 0 & 0\\\
+    -1 & -2 & 1\\
+    0 & 0 & 0\\
     1 & 2 & 1
 \end{bmatrix}
-```
+$$
 ![Sobel vertival](./img/image_derivative_vertical.png)
