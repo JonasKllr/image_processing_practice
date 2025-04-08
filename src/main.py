@@ -17,17 +17,13 @@ image.rgb_to_grayscale()
 image.rotate()
 
 image_linar_operations = LinearOperators(image.get_image())
-image_linar_operations.apply_derivative_sobel("horizontal")
+image_linar_operations.apply_derivative_laplacian()
 plt.imshow(image_linar_operations.get_image(), cmap="gray")
 plt.show()
 plt.close()
 
-# image_linar_operations = LinearOperators(image.get_image())
-# image_linar_operations.apply_derivative_sobel("vertical")
-# plt.imshow(image_linar_operations.get_image(), cmap="gray")
-# plt.show()
-# plt.close()
 
-filename = "image_derivative_horizontal_2.png"
+
+filename = "image_derivative_laplacian.png"
 PATH_TO_SAVE = os.path.join(PATH, filename)
 cv2.imwrite(PATH_TO_SAVE, image_linar_operations.get_image())

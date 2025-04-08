@@ -20,3 +20,8 @@ class LinearOperators:
         
         self.image = np.absolute(self.image)
         self.image = np.uint8(self.image)
+
+    def apply_derivative_laplacian(self) -> None:
+        self.image = cv2.Laplacian(self.image, cv2.CV_64F)
+        self.image = np.absolute(self.image)
+        self.image = np.uint8(self.image)
