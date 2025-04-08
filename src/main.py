@@ -1,6 +1,7 @@
 import cv2
 import os
 from matplotlib import pyplot as plt
+import numpy as np
 
 from image_preprocessor import ImagePreprocessor, read_image_from_file
 from point_operators import PointOperators
@@ -15,20 +16,18 @@ image.crop_to_roi()
 image.rgb_to_grayscale()
 image.rotate()
 
-plt.imshow(cv2.cvtColor(image.get_image(), cv2.IMREAD_GRAYSCALE))
-plt.show()
-plt.close()
-
-image_point_operations = PointOperators(image.get_image())
-image_point_operations.plot_histogram()
-image_point_operations.apply_histogram_equalization()
-image_point_operations.plot_histogram()
-plt.imshow(cv2.cvtColor(image_point_operations.get_image(), cv2.IMREAD_GRAYSCALE))
-plt.show()
-plt.close()
-
 image_linar_operations = LinearOperators(image.get_image())
-image_linar_operations.apply_gaussian_avg_filter((9,9), 3)
-plt.imshow(cv2.cvtColor(image_linar_operations.get_image(), cv2.IMREAD_GRAYSCALE))
+image_linar_operations.apply_derivative_sobel("horizontal")
+plt.imshow(image_linar_operations.get_image(), cmap="gray")
 plt.show()
 plt.close()
+
+# image_linar_operations = LinearOperators(image.get_image())
+# image_linar_operations.apply_derivative_sobel("vertical")
+# plt.imshow(image_linar_operations.get_image(), cmap="gray")
+# plt.show()
+# plt.close()
+
+filename = "image_derivative_horizontal_2.png"
+PATH_TO_SAVE = os.path.join(PATH, filename)
+cv2.imwrite(PATH_TO_SAVE, image_linar_operations.get_image())
