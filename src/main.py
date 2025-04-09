@@ -24,6 +24,6 @@ plt.close()
 
 
 
-filename = "image_derivative_laplacian.png"
-PATH_TO_SAVE = os.path.join(PATH, filename)
-cv2.imwrite(PATH_TO_SAVE, image_linar_operations.get_image())
+# filename = "image_derivative_laplacian.png"
+# PATH_TO_SAVE = os.path.join(PATH, filename)
+# cv2.imwrite(PATH_TO_SAVE, image_linar_operations.get_image())

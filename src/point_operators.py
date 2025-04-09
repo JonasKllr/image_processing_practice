@@ -2,14 +2,11 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+from base_operator import BaseOperator
 
-class PointOperators:
-    def __init__(self, image: np.ndarray):
-        self.image = image
 
-    def get_image(self) -> np.ndarray:
-        return self.image
-
+class PointOperators(BaseOperator):
+    
     def plot_histogram(self) -> None:
         plt.hist(self.image.ravel(), 256, [0, 255])
         plt.show()
