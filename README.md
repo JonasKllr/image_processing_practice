@@ -47,7 +47,7 @@ kernel_site = (9, 9), sigma = 3:
 ### Sobel Derivatives
 
 ```python
-LinearOperators.apply_derivative(orientation: str)
+LinearOperators.apply_derivative_sobel(orientation: str)
 ```
 
 ```math
@@ -71,6 +71,9 @@ LinearOperators.apply_derivative(orientation: str)
 
 ### Laplacian Derivative
 
+```python
+LinearOperators.apply_derivative_laplacian()
+```
 
 ```math
 \mathbf{Laplacian\space kernel} = \begin{bmatrix}
