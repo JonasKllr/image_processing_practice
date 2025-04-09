@@ -50,9 +50,8 @@ kernel_site = (9, 9), sigma = 3:
 LinearOperators.apply_derivative(orientation: str)
 ```
 
-Horizontal kernel 
 ```math
-\begin{bmatrix}
+\mathbf{Horizontal\space kernel} = \begin{bmatrix}
     -1 & 0 & 1\\
     -2 & 0 & 2\\
     -1 & 0 & 2
@@ -60,9 +59,8 @@ Horizontal kernel
 ```
 ![Sobel horizontal](./img/image_derivative_horizontal.png)
 
-Vertical kernel 
 ```math
-\begin{bmatrix}
+\mathbf{Vertical\space kernel} = \begin{bmatrix}
     -1 & -2 & 1\\
     0 & 0 & 0\\
     1 & 2 & 1
@@ -75,7 +73,7 @@ Vertical kernel
 
 
 ```math
-\begin{bmatrix}
+\mathbf{Laplacian\space kernel} = \begin{bmatrix}
     0 & 1 & 0\\
     1 & -4 & 1\\
     0 & 1 & 0
